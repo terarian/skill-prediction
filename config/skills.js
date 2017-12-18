@@ -223,7 +223,7 @@ module.exports = {
 				level: {
 					9: {
 						abnormals: {
-							100201: { skill: 390100 }
+							100201: { skill: 390130 }
 						}
 					}
 				}
@@ -340,13 +340,7 @@ module.exports = {
 		39: { // Traverse Cut (Defensive Stance)
 			0: {
 				length: 2000,
-				distance: 160,
-				noInterrupt: [1, 2, 3, 4, 8, 9, 10, 12, 13, 16, 17, 19, 21, 22, 29, 32, 34, 36, 37, 39],
-				chains: {
-					11: 30,
-					18: 30,
-					27: 30
-				}
+				distance: 160
 			},
 			30: {
 				length: 2650,
