@@ -10,23 +10,28 @@ class Ping {
 		this.history = []
 
 		let ping = () => {
+			clearTimeout(this._timeout)
 			dispatch.toServer('C_REQUEST_GAMESTAT_PING', 1)
 			this._waiting = true
 			this._lastSent = Date.now()
 			this._timeout = setTimeout(ping, PING_TIMEOUT)
 		}
 
-		dispatch.hook('S_SPAWN_ME', 1, () => { this._timeout = setTimeout(ping, PING_INTERVAL) })
-		dispatch.hook('S_LOAD_TOPO', 1, event => { clearTimeout(this._timeout) })
-		dispatch.hook('S_RETURN_TO_LOBBY', 1, () => { clearTimeout(this._timeout) })
+		dispatch.hook('S_SPAWN_ME', 'raw', () => {
+			clearTimeout(this._timeout)
+			this._timeout = setTimeout(ping, PING_INTERVAL)
+		})
+
+		dispatch.hook('S_LOAD_TOPO', 'raw', () => { clearTimeout(this._timeout) })
+		dispatch.hook('S_RETURN_TO_LOBBY', 'raw', () => { clearTimeout(this._timeout) })
 
 		// Disable inaccurate ingame ping so we have exclusive use of ping packets
-		dispatch.hook('C_REQUEST_GAMESTAT_PING', 1, () => {
+		dispatch.hook('C_REQUEST_GAMESTAT_PING', 'raw', () => {
 			dispatch.toClient('S_RESPONSE_GAMESTAT_PONG', 1)
 			return false
 		})
 
-		dispatch.hook('S_RESPONSE_GAMESTAT_PONG', 1, () => {
+		dispatch.hook('S_RESPONSE_GAMESTAT_PONG', 'raw', () => {
 			let result = Date.now() - this._lastSent
 
 			clearTimeout(this._timeout)
