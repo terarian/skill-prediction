@@ -1236,6 +1236,7 @@ module.exports = {
 		11: { // Lightning Strike
 			0: {
 				length: 840,
+				checkReset: true,
 				race: {
 					9: { length: 800 } // Elin
 				}
