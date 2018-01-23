@@ -3085,7 +3085,7 @@ module.exports = {
 			},
 			1: true,
 			2: true,
-			30: { fixedSpeed: 1},
+			30: true,
 			31: true
 		},
 		9: { // Jackhammer
