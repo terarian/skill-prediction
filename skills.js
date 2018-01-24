@@ -200,7 +200,7 @@ module.exports = function SkillPrediction(dispatch) {
 		if(event.target.equals(gameId)) vehicleEx = null
 	})
 
-	dispatch.hook('C_PLAYER_LOCATION', 1, event => {
+	dispatch.hook('C_PLAYER_LOCATION', 1, {order: 10, filter: {fake: null}}, event => {
 		if(DEBUG_LOC) console.log('Location %d %d (%d %d %d %d) > (%d %d %d)', event.type, event.speed, Math.round(event.x1), Math.round(event.y1), Math.round(event.z1), event.w, Math.round(event.x2), Math.round(event.y2), Math.round(event.z2))
 
 		if(currentAction) {
