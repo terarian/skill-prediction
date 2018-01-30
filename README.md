@@ -1,6 +1,13 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-ff69b4.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5MTKARBK2CNG8&lc=US&item_name=Pinkie%27s%20TERA%20Mods&currency_code=USD)
+:heart: [![Donate](https://img.shields.io/badge/Donate-PayPal-ff69b4.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5MTKARBK2CNG8&lc=US&item_name=Pinkie%27s%20TERA%20Mods&currency_code=USD) :heart:
 
+## Skill Prediction
 Simulates skills client-side, eliminating ping-based delays and animation lock.
+
+**Note**: If your skills become delayed, make sure Windows Defender is disabled. See settings.js for additional configuration options for non-standard setups.
+
+**Noctenium Infusion**: Having regular, Friendly, or Alliance Noctenium Infusion in your inventory will cause the server to send a huge chunk of redundant data after every skill while using *any* type of Noctenium Infusion. You may use [this mod](https://github.com/mister-kay/no-more-noctenium-lag) to reduce the client lag, however the network lag will still be noticable unless you have 50Mbps or higher download speed.
+
+The recommended solution is to delete or bank any Noctenium Infusion and use Refined Noctenium Infusion instead.
 
 ## Developers
 ### config/skills.js
