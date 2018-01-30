@@ -1,7 +1,8 @@
 {
 	"name": "skill-prediction",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "Simulates skills client-side, eliminating ping-based delays and animation lock.",
+	"main": "lib",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/pinkipi/skill-prediction.git"
