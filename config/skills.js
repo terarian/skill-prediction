@@ -2500,7 +2500,7 @@ module.exports = {
 	},
 	9: { // Gunner
 		'*': { consumeAbnormal: [10152010, 10152011] },
-		/*1: { // Blast
+		1: { // Blast
 			'*': {
 				fixedSpeed: 1,
 				length: 1195,
@@ -2516,7 +2516,7 @@ module.exports = {
 				flyingDistance: 500,
 				explodeOnHit: true
 			}
-		},*/
+		},
 		2: { // Bombardment
 			'*': { noRetry: true },
 			0: {
