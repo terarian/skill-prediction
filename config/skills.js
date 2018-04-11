@@ -426,6 +426,7 @@ module.exports = {
 		10: { // Debilitate
 			'*': {
 				distance: 43.69,
+				noInterrupt: [2, 3, 5, 13, 25, 26],
 				chains: {
 					1: 30,
 					18: 30
@@ -524,7 +525,7 @@ module.exports = {
 				length: 1000
 			}
 		},
-		20: { // Menacing Wave
+		20: { // Menacing Wave (removed)
 			0: {
 				fixedSpeed: 1,
 				length: [700, 800]
@@ -540,6 +541,7 @@ module.exports = {
 			},
 			0: { length: 1400 }, // TODO: Unconfirmed, low level?
 			1: { length: 1400 },
+			2: { length: 1400 },
 			30: { length: 1260 }
 		},
 		22: { // Iron Will
