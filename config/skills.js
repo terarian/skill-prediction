@@ -424,10 +424,15 @@ module.exports = {
 			0: { length: [725, 850] }
 		},
 		10: { // Debilitate
-			0: {
-				length: 925,
-				distance: 43.69
-			}
+			'*': {
+				distance: 43.69,
+				chains: {
+					1: 30,
+					18: 30
+				}
+			},
+			0: { length: 925 },
+			30: { length: 832 }
 		},
 		11: { // Retaliate
 			0: {
