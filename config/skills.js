@@ -372,7 +372,8 @@ module.exports = {
 				level: {
 					1: {
 						length: 333,
-						stamina: 40
+						stamina: 40,
+						endType51: true
 					}
 				},
 				noRetry: true
@@ -615,6 +616,14 @@ module.exports = {
 			1: {
 				length: [250, 791, 833],
 				distance: [29.48, 468.97, 0]
+			}
+		},
+		29: { // Guardian's Barrier
+			0: {
+				type: 'holdInfinite',
+				fixedSpeed: 1,
+				length: 700,
+				endType51: true
 			}
 		}
 	},
@@ -3021,18 +3030,18 @@ module.exports = {
 			10: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				length: 800,
 				distance: 33.38,
 				triggerAbnormal: { 10153006: 0x7fffffff },
-				consumeAbnormalEnd: 10153006
+				consumeAbnormalEnd: 10153006,
+				endType51: true
 			},
 			11: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				length: 800,
 				distance: 33.38,
 				triggerAbnormal: { 10153005: 0x7fffffff },
-				consumeAbnormalEnd: 10153005
+				consumeAbnormalEnd: 10153005,
+				endType51: true
 			},
 			12: {
 				/*abnormals: {
