@@ -2623,7 +2623,7 @@ module.exports = {
 			1: {
 				fixedSpeed: 1,
 				length: 122,
-				stamina: 70,
+				stamina: 75,
 				instantStamina: true,
 				glyphs: {
 					30046: { stamina: -10 }
