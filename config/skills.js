@@ -374,12 +374,14 @@ module.exports = {
 		3: { // Onslaught
 			'*': {
 				distance: [0, 100, 100, 100, 100, 62.7],
-				noInterrupt: [1, 2, 3, 8, 10, 13, 15, 18, 21, 25, 26],
+				noInterrupt: ['1-0', '1-1', 2, 3, 8, 10, 13, 15, 21, 25, 26],
 				abnormals: {
 					22060: { speed: 1.25 }
 				},
 				chains: {
-					5: 30
+					1: 30,
+					5: 30,
+					18: 30
 				}
 			},
 			0: { length: [950, 500, 500, 500, 400, 775] },
@@ -2623,7 +2625,7 @@ module.exports = {
 			1: {
 				fixedSpeed: 1,
 				length: 122,
-				stamina: 70,
+				stamina: 75,
 				instantStamina: true,
 				glyphs: {
 					30046: { stamina: -10 }
