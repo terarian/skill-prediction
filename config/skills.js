@@ -368,7 +368,14 @@ module.exports = {
 			0: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				stamina: 50
+				stamina: 50,
+				level: {
+					1: {
+						length: 333,
+						stamina: 40
+					}
+				},
+				noRetry: true
 			}
 		},
 		3: { // Onslaught
@@ -595,10 +602,19 @@ module.exports = {
 		27: { // Rallying Cry
 			0: { length: 620 }
 		},
-		28: { // Righteous Leap (translation pending)
+		28: { // Righteous Leap
 			0: {
-				length: [375, 1025, 3100],
-				distance: [29.48, 445.52, 0]
+				length: [333, 1055, 3125],
+				distance: [29.48, 445.52, 0],
+				noInterrupt: [28],
+				chains: {
+					15: 1,
+					25: 1
+				}
+			},
+			1: {
+				length: [250, 791, 833],
+				distance: [29.48, 468.97, 0]
 			}
 		}
 	},
