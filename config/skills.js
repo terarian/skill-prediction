@@ -455,7 +455,7 @@ module.exports = {
 		},
 		13: { // Spring Attack
 			0: {
-				length: 2775,
+				length: 2799,
 				distance: 85,
 				noInterrupt: ['1-0', '1-1', 2, 3, 13, 15, 25, 26],
 				chains: {
