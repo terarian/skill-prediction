@@ -625,6 +625,9 @@ module.exports = {
 				length: 700,
 				endType51: true
 			}
+		},
+		30: { // Divine Protection
+			0: { length: 1250 }
 		}
 	},
 	2: { // Slayer
