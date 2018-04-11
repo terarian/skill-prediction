@@ -530,10 +530,16 @@ module.exports = {
 			}
 		},
 		21: { // Lockdown Blow
-			0: {
-				length: 1400,
-				distance: 122.66
-			}
+			'*': {
+				distance: 122.66,
+				chains: {
+					10: 30,
+					18: 30
+				}
+			},
+			0: { length: 1400 }, // TODO: Unconfirmed, low level?
+			1: { length: 1400 },
+			30: { length: 1260 }
 		},
 		22: { // Iron Will
 			0: {
