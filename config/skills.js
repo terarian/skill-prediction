@@ -439,7 +439,7 @@ module.exports = {
 		10: { // Debilitate
 			'*': {
 				distance: 43.69,
-				noInterrupt: [2, 3, 5, 10, 13, 25, 26],
+				noInterrupt: [2, 3, 5, 10, 13, 21, 25, 26],
 				chains: {
 					1: 30,
 					18: 30
