@@ -412,8 +412,10 @@ module.exports = {
 				distance: 43.69,
 				chains: { 10: 30 }
 			},
-			0: { length: 830 },
-			30: { length: 691 }
+			0: { length: 820 }, // TODO: Unconfirmed, low level?
+			1: { length: 820 },
+			2: { length: 820 },
+			30: { length: 683 }
 		},
 		7: { // Guardian Shout
 			0: {
