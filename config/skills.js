@@ -409,12 +409,13 @@ module.exports = {
 		},
 		5: { // Shield Bash
 			'*': {
+				length: 820,
 				distance: 43.69,
 				chains: { 10: 30 }
 			},
-			0: { length: 820 }, // TODO: Unconfirmed, low level?
-			1: { length: 820 },
-			2: { length: 820 },
+			0: true, // TODO: Unconfirmed, low level?
+			1: true,
+			2: true,
 			30: { length: 683 }
 		},
 		7: { // Guardian Shout
@@ -545,15 +546,16 @@ module.exports = {
 		},
 		21: { // Lockdown Blow
 			'*': {
+				length: 1400,
 				distance: 122.66,
 				chains: {
 					10: 30,
 					18: 30
 				}
 			},
-			0: { length: 1400 }, // TODO: Unconfirmed, low level?
-			1: { length: 1400 },
-			2: { length: 1400 },
+			0: true, // TODO: Unconfirmed, low level?
+			1: true,
+			2: true,
 			30: { length: 1260 }
 		},
 		22: { // Iron Will
