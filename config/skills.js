@@ -408,10 +408,12 @@ module.exports = {
 			}
 		},
 		5: { // Shield Bash
-			0: {
-				length: 830,
-				distance: 43.69
-			}
+			'*': {
+				distance: 43.69,
+				chains: { 10: 30 }
+			},
+			0: { length: 830 },
+			30: { length: 691 }
 		},
 		7: { // Guardian Shout
 			0: {
@@ -1901,7 +1903,7 @@ module.exports = {
 			11: { length: 825 },
 			12: { length: 1275 }
 		},
-		4: { // Ancient Binding
+		4: { // Ancient Binding (removed)
 			0: { length: 1275 }
 		},
 		5: { // Titanic Favor
