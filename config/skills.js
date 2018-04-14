@@ -3879,16 +3879,16 @@ module.exports = {
 					32058: { speed: 1.3 }
 				}
 			},
-			0: { length: 880 },
-			1: { length: 390 },
-			2: { length: 390 },
-			3: { length: 390 },
-			4: { length: 390 },
-			5: { length: 390 },
-			6: { length: 390 },
-			7: { length: 390 },
-			8: { length: 390 },
-			9: { length: 390 }
+			0: { length: 900 },
+			1: { length: 400 },
+			2: { length: 400 },
+			3: { length: 400 },
+			4: { length: 400 },
+			5: { length: 400 },
+			6: { length: 400 },
+			7: { length: 400 },
+			8: { length: 400 },
+			9: { length: 400 }
 		},
 		16: { // Death Blossom
 			0: {
