@@ -21,20 +21,54 @@ module.exports = {
 	0: { // Warrior
 		1: { // Combo Attack
 			0: {
-				length: 565,
-				distance: 62.29
+				length: 566,
+				distance: 47.53,
+				race: {
+					4: { distance: 35.49 },
+					5: { distance: 45 },
+					7: { distance: 60 },
+					8: { distance: 54.32 },
+					9: { distance: 64.29 },
+					10: { distance: 32.81 }
+				}
 			},
 			1: {
-				length: 650,
-				distance: 51.69
+				length: 657,
+				distance: 42.12,
+				race: {
+					4: { distance: 42.96 },
+					5: { distance: 39 },
+					7: { distance: 27 },
+					8: { distance: 21.17 },
+					9: { distance: 51.69 },
+					10: { distance: 49.22 }
+				}
 			},
 			2: {
-				length: 650,
-				distance: 28.08
+				length: 657,
+				distance: 28.08,
+				race: {
+					4: { distance: 31.02 },
+					5: { distance: 26 },
+					7: { distance: 49 },
+					8: { distance: 56.2 },
+					10: { distance: 25.69 }
+				}
 			},
 			3: {
-				length: 900,
-				distance: 73.34
+				length: 909,
+				distance: 75.07,
+				race: {
+					1: { distance: 82.07 },
+					2: { distance: 79.9 },
+					3: { distance: 66.41 },
+					4: { distance: 64.66 },
+					5: { distance: 85 },
+					7: { distance: 58 },
+					8: { distance: 63.53 },
+					9: { distance: 73.34 },
+					10: { distance: 68.69 }
+				}
 			}
 		},
 		2: { // Evasive Roll
@@ -151,12 +185,36 @@ module.exports = {
 		},
 		19: { // Rising Fury
 			0: {
-				length: 725,
-				distance: 170.61
+				length: 733,
+				distance: 148.2,
+				race: {
+					1: { distance: 157.28 },
+					2: { distance: 144.85 },
+					3: { distance: 155.3 },
+					4: { distance: 144.85 },
+					5: { distance: 143.27 },
+					6: { distance: 170.43 },
+					7: { distance: 162 },
+					8: { distance: 161.74 },
+					9: { distance: 170.67 },
+					10: { distance: 132.61 }
+				}
 			},
 			1: {
 				length: 1400,
-				distance: 122.34
+				distance: 92.66,
+				race: {
+					1: { distance: 88.17 },
+					2: { distance: 100.11 },
+					3: { distance: 92.1 },
+					4: { distance: 100.11 },
+					5: { distance: 101.69 },
+					6: { distance: 117.31 },
+					7: { distance: 85 },
+					8: { distance: 116.63 },
+					9: { distance: 122.34 },
+					10: { distance: 83.01 }
+				}
 			}
 		},
 		20: { // Deadly Gamble
@@ -352,34 +410,77 @@ module.exports = {
 		1: { // Combo Attack
 			'*': { noInterrupt: [1, 2] },
 			0: {
-				length: 635,
-				distance: 74.45
+				length: 624,
+				distance: 52.36,
+				race: {
+					1: { distance: 59.91 },
+					2: { distance: 50.62 },
+					3: { distance: 55.08 },
+					4: { distance: 35 },
+					5: { distance: 34.9 },
+					6: { distance: 54.58 },
+					7: { distance: 59.91 },
+					8: { distance: 39.4 },
+					9: { distance: 74.45 },
+					10: { distance: 18.72 }
+				}
 			},
 			1: {
-				length: 1025,
-				distance: 19.2
+				length: 1021,
+				distance: 25,
+				race: {
+					1: { distance: 28.39 },
+					2: { distance: 30.8 },
+					3: { distance: 30.68 },
+					5: { distance: 30.52 },
+					6: { distance: 30.8 },
+					7: { distance: 28.39 },
+					8: { distance: 39.05 },
+					9: { distance: 19.2 },
+					10: { distance: 30.8 }
+				}
 			},
 			2: {
-				length: 1815,
-				distance: 66.07
+				length: 1818,
+				distance: 70,
+				race: {
+					1: { distance: 59.53 },
+					3: { distance: 64.36 },
+					4: { distance: 60 },
+					5: { distance: 54.48 },
+					7: { distance: 59.53 },
+					8: { distance: 41.06 },
+					9: { distance: 66.07 },
+					10: { distance: 69.98 }
+				}
 			}
 		},
 		2: { // Stand Fast
 			0: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				stamina: 50
+				stamina: 50,
+				level: {
+					1: {
+						length: 333,
+						stamina: 40,
+						endType51: true
+					}
+				},
+				noRetry: true
 			}
 		},
 		3: { // Onslaught
 			'*': {
 				distance: [0, 100, 100, 100, 100, 62.7],
-				noInterrupt: [1, 2, 3, 8, 10, 13, 15, 18, 21, 25, 26],
+				noInterrupt: ['1-0', '1-1', 2, 3, 8, 10, 13, 15, 21, 25, 26],
 				abnormals: {
 					22060: { speed: 1.25 }
 				},
 				chains: {
-					5: 30
+					1: 30,
+					5: 30,
+					18: 30
 				}
 			},
 			0: { length: [950, 500, 500, 500, 400, 775] },
@@ -398,10 +499,15 @@ module.exports = {
 			}
 		},
 		5: { // Shield Bash
-			0: {
-				length: 830,
-				distance: 43.69
-			}
+			'*': {
+				length: 820,
+				distance: 43.69,
+				chains: { 10: 30 }
+			},
+			0: true, // TODO: Unconfirmed, low level?
+			1: true,
+			2: true,
+			30: { length: 683 }
 		},
 		7: { // Guardian Shout
 			0: {
@@ -422,10 +528,16 @@ module.exports = {
 			0: { length: [725, 850] }
 		},
 		10: { // Debilitate
-			0: {
-				length: 925,
-				distance: 43.69
-			}
+			'*': {
+				distance: 43.69,
+				noInterrupt: [2, 3, 5, 10, 13, 21, 25, 26],
+				chains: {
+					1: 30,
+					18: 30
+				}
+			},
+			0: { length: 925 },
+			30: { length: 832 }
 		},
 		11: { // Retaliate
 			0: {
@@ -439,15 +551,16 @@ module.exports = {
 		},
 		13: { // Spring Attack
 			0: {
-				length: 2775,
+				length: 2799,
 				distance: 85,
-				noInterrupt: ['1-0', '1-1', 2, 3, 13, 15, '18-0', 21, 25, 26],
+				noInterrupt: ['1-0', '1-1', 2, 3, 13, 15, 25, 26],
 				chains: {
 					1: 30,
 					5: 30,
 					8: 30,
 					10: 30,
-					18: 30
+					18: 30,
+					21: 30
 				}
 			},
 			30: {
@@ -479,34 +592,34 @@ module.exports = {
 		},
 		18: { // Shield Barrage
 			0: {
-				length: 625,
-				distance: 122.66,
+				length: 598,
+				distance: 100.13,
 				abnormals: {
 					201550: { speed: 1.2 }
 				},
 				race: {
-					0: { distance: 100.13 }, // Male Human
-					2: { // Male High Elf
-						length: 525,
+					2: {
+						length: 503,
 						distance: 102.7
 					},
-					4: { // Male Aman
-						length: 595,
-						distance: 95
-					},
-					5: { distance: 100.13 }, // Female Aman
-					8: { distance: 92.39 } // Popori
+					3: { distance: 103.43 },
+					4: { distance: 95 },
+					6: { distance: 110.39 },
+					7: { distance: 116.18 },
+					8: { distance: 92.39 },
+					9: { distance: 122.66 },
+					10: { distance: 92.13 }
 				}
 			},
 			1: {
 				length: 800,
-				distance: 66.04,
+				distance: 74.84,
 				race: {
-					0: { distance: 74.84 }, // Male Human
-					2: { distance: 80.43 }, // Male High Elf
-					4: { distance: 87 }, // Male Aman
-					5: { distance: 74.84 }, // Female Aman
-					8: { distance: 89.46 } // Popori
+					2: { distance: 80.43 },
+					3: { distance: 70.32 },
+					4: { distance: 87 },
+					8: { distance: 89.46 },
+					9: { distance: 66.04 }
 				}
 			}
 		},
@@ -516,17 +629,25 @@ module.exports = {
 				length: 1000
 			}
 		},
-		20: { // Menacing Wave
+		20: { // Menacing Wave (removed)
 			0: {
 				fixedSpeed: 1,
 				length: [700, 800]
 			}
 		},
 		21: { // Lockdown Blow
-			0: {
+			'*': {
 				length: 1400,
-				distance: 122.66
-			}
+				distance: 122.66,
+				chains: {
+					10: 30,
+					18: 30
+				}
+			},
+			0: true, // TODO: Unconfirmed, low level?
+			1: true,
+			2: true,
+			30: { length: 1260 }
 		},
 		22: { // Iron Will
 			0: {
@@ -547,13 +668,14 @@ module.exports = {
 			0: {
 				length: 2375,
 				distance: 100,
-				noInterrupt: [1, 2, 3, 5, '18-0', 21, 25, 26],
+				noInterrupt: [1, 2, 3, 5, 25, 26],
 				chains: {
 					8: 30,
 					10: 30,
 					13: 30,
 					15: 30,
-					18: 30
+					18: 30,
+					21: 30
 				}
 			},
 			30: {
@@ -578,31 +700,92 @@ module.exports = {
 		27: { // Rallying Cry
 			0: { length: 620 }
 		},
-		28: { // Righteous Leap (translation pending)
+		28: { // Righteous Leap
 			0: {
-				length: [375, 1025, 3100],
-				distance: [29.48, 445.52, 0]
+				length: [333, 1055, 3125],
+				distance: [29.48, 445.52, 0],
+				noInterrupt: [1, 3, 4, 5, 9, 10, 12, 13, 18, 21, 23, 24, 26, 28],
+				chains: {
+					15: 1,
+					25: 1
+				}
+			},
+			1: {
+				length: [250, 791, 833],
+				distance: [29.48, 468.97, 0]
 			}
+		},
+		29: { // Guardian's Barrier
+			0: {
+				type: 'holdInfinite',
+				fixedSpeed: 1,
+				length: 700,
+				endType51: true
+			}
+		},
+		30: { // Divine Protection
+			0: { length: 1250 }
 		}
 	},
 	2: { // Slayer
 		1: { // Combo Attack
 			'*': { noRetry: true },
 			0: {
-				length: 850,
-				distance: 36.68
+				length: 761,
+				distance: 36.68,
+				race: {
+					2: { distance: 50.68 },
+					3: { distance: 38.8 },
+					4: { distance: 40 },
+					7: { distance: 60 },
+					8: { distance: 31.53 },
+					10: { distance: 25.08 }
+				}
 			},
 			1: {
-				length: 1025,
-				distance: 35.68
+				length: 1021,
+				distance: 35.67,
+				race: {
+					2: {
+						length: 1051,
+						distance: 30.67
+					},
+					3: { distance: 38.84 },
+					4: { distance: 35 },
+					5: { distance: 35.68 },
+					7: { distance: 17 },
+					8: { distance: 49.4 },
+					10: { distance: 32.95 }
+				}
 			},
 			2: {
-				length: 750,
-				distance: 28.05
+				length: 748,
+				distance: 28.05,
+				race: {
+					2: { distance: 33.05 },
+					3: { distance: 24.22 },
+					4: { distance: 20 },
+					6: { distance: 22.3 },
+					7: { distance: 23 },
+					8: { distance: 19.33 },
+					10: { distance: 22.5 }
+				}
 			},
 			3: {
-				length: 1650,
-				distance: 46.76
+				length: 1636,
+				distance: 46.76,
+				race: {
+					3: {
+						length: 1545,
+						distance: 45.32
+					},
+					4: { distance: 40 },
+					5: { distance: 64.36 },
+					6: { distance: 118.2 },
+					7: { distance: 45 },
+					8: { distance: 19.85 },
+					10: { distance: 37.5 }
+				}
 			}
 		},
 		2: { // Knockdown Strike
@@ -815,20 +998,80 @@ module.exports = {
 		1: { // Combo Attack
 			'*': { noRetry: true },
 			0: {
-				length: 1125,
-				distance: 78
+				length: 1112,
+				distance: 58.1,
+				race: {
+					1: { distance: 61.96 },
+					2: { distance: 54.87 },
+					3: { distance: 63.24 },
+					4: { distance: 27.72 },
+					5: {
+						length: 1082,
+						distance: 62.34
+					},
+					6: { distance: 55.69 },
+					7: { distance: 64.06 },
+					8: { distance: 48.89 },
+					9: { distance: 78.01 },
+					10: { distance: 44.22 }
+				}
 			},
 			1: {
-				length: 925,
-				distance: 21.05
+				length: 930,
+				distance: 23.28,
+				race: {
+					2: { distance: 26.02 },
+					3: { distance: 27.33 },
+					4: { distance: 25 },
+					5: {
+						length: 960,
+						distance: 24.52
+					},
+					6: { distance: 23.27 },
+					7: { distance: 16.05 },
+					8: { distance: 7.06 },
+					9: { distance: 21.05 },
+					10: { distance: 21.08 }
+				}
 			},
 			2: {
-				length: 1125,
-				distance: 31.84
+				length: 1112,
+				distance: 22.83,
+				race: {
+					2: { distance: 23.3 },
+					3: { distance: 32.47 },
+					4: { distance: 25 },
+					5: { distance: 17.1 },
+					7: { distance: 42.59 },
+					8: { distance: 40.93 },
+					9: { distance: 31.84 },
+					10: { distance: 20.68 }
+				}
 			},
 			3: {
-				length: 1825,
-				distance: 54.28
+				length: 1818,
+				distance: 69.27,
+				race: {
+					1: { distance: 70.41 },
+					2: {
+						length: 1636,
+						distance: 47.29
+					},
+					3: { distance: 55.25 },
+					4: {
+						length: 2000,
+						distance: 45
+					},
+					5: {
+						length: 2000,
+						distance: 61.6
+					},
+					6: { distance: 59.47 },
+					7: { distance: 51.11 },
+					8: { distance: 43.68 },
+					9: { distance: 54.28 },
+					10: { distance: 63.26 }
+				}
 			}
 		},
 		2: { // Axe Block
@@ -1126,12 +1369,38 @@ module.exports = {
 		},
 		32: { // Punishing Strike
 			0: {
-				length: 750,
-				distance: 170.61
+				length: 772,
+				distance: 23.28,
+				race: {
+					2: { distance: 26.02 },
+					3: { distance: 27.33 },
+					4: { distance: 25 },
+					5: {
+						length: 797,
+						distance: 24.52
+					},
+					6: { distance: 23.27 },
+					7: { distance: 16.05 },
+					8: {
+						length: 925,
+						distance: 40.93
+					},
+					9: { distance: 21.05 },
+					10: { distance: 21.08 }
+				}
 			},
 			1: {
 				length: 800,
-				distance: 122.34
+				distance: 168.11,
+				race: {
+					1: { distance: 188.37 },
+					3: { distance: 173.19 },
+					4: { distance: 145 },
+					7: { distance: 191.79 },
+					8: { distance: 240.4 },
+					9: { distance: 167.62 },
+					10: { distance: 158.11 }
+				}
 			}
 		}
 	},
@@ -1546,11 +1815,46 @@ module.exports = {
 		18: { // Close Quarters
 			0: {
 				length: 300,
-				distance: 89.8
+				distance: 64.46,
+				race: {
+					1: {
+						length: 333,
+						distance: 48.1
+					},
+					2: { distance: 57.88 },
+					3: { distance: 63.42 },
+					4: { length: 333 },
+					6: { distance: 60.95 },
+					7: {
+						length: 333,
+						distance: 48
+					},
+					8: {
+						length: 333,
+						distance: 89.8
+					},
+					9: { distance: 54.68 },
+					10: {
+						length: 333,
+						distance: 54.46
+					}
+				}
 			},
 			1: {
 				length: 1200,
-				distance: 87.29
+				distance: 73.69,
+				race: {
+					1: { distance: 87.29 },
+					2: { distance: 79.11 },
+					3: { distance: 54.45 },
+					4: { distance: 66.18 },
+					5: { distance: 26.65 },
+					6: { distance: 77.2 },
+					7: { distance: 66 },
+					8: { distance: 48.35 },
+					9: { distance: 56.9 },
+					10: { distance: 83.69 }
+				}
 			}
 		},
 		19: { // Poison Arrow
@@ -1601,10 +1905,10 @@ module.exports = {
 	},
 	6: { // Priest
 		1: { // Divine Radiance
-			0: { length: 625 },
+			0: { length: 619 },
 			1: { length: 650 },
-			2: { length: 675 },
-			3: { length: 725 }
+			2: { length: 684 },
+			3: { length: 722 }
 		},
 		2: { // Regeneration Circle
 			0: {
@@ -1856,7 +2160,7 @@ module.exports = {
 			11: { length: 825 },
 			12: { length: 1275 }
 		},
-		4: { // Ancient Binding
+		4: { // Ancient Binding (removed)
 			0: { length: 1275 }
 		},
 		5: { // Titanic Favor
@@ -2623,7 +2927,7 @@ module.exports = {
 			1: {
 				fixedSpeed: 1,
 				length: 122,
-				stamina: 70,
+				stamina: 75,
 				instantStamina: true,
 				glyphs: {
 					30046: { stamina: -10 }
@@ -2988,18 +3292,18 @@ module.exports = {
 			10: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				length: 800,
 				distance: 33.38,
 				triggerAbnormal: { 10153006: 0x7fffffff },
-				consumeAbnormalEnd: 10153006
+				consumeAbnormalEnd: 10153006,
+				endType51: true
 			},
 			11: {
 				type: 'holdInfinite',
 				fixedSpeed: 1,
-				length: 800,
 				distance: 33.38,
 				triggerAbnormal: { 10153005: 0x7fffffff },
-				consumeAbnormalEnd: 10153005
+				consumeAbnormalEnd: 10153005,
+				endType51: true
 			},
 			12: {
 				/*abnormals: {
@@ -3575,16 +3879,16 @@ module.exports = {
 					32058: { speed: 1.3 }
 				}
 			},
-			0: { length: 880 },
-			1: { length: 390 },
-			2: { length: 390 },
-			3: { length: 390 },
-			4: { length: 390 },
-			5: { length: 390 },
-			6: { length: 390 },
-			7: { length: 390 },
-			8: { length: 390 },
-			9: { length: 390 }
+			0: { length: 900 },
+			1: { length: 400 },
+			2: { length: 400 },
+			3: { length: 400 },
+			4: { length: 400 },
+			5: { length: 400 },
+			6: { length: 400 },
+			7: { length: 400 },
+			8: { length: 400 },
+			9: { length: 400 }
 		},
 		16: { // Death Blossom
 			0: {
