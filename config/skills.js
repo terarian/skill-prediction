@@ -1982,7 +1982,7 @@ module.exports = {
 		},
 		2: { // Regeneration Circle
 			0: {
-				length: 3150,
+				length: 2149,
 				abnormals: {
 					902: { speed: 1.15 },
 					911: { speed: 1.15 },
@@ -1994,31 +1994,52 @@ module.exports = {
 					921: { speed: 1.225 },
 					922: { speed: 1.225 },
 					999010000: { speed: 1.15 }
+				},
+				race: {
+					10: { length: 2774 }
 				}
 			}
 		},
 		3: { // Healing Circle
-			0: { length: 1750 }
+			0: {
+				length: 1763,
+				chains: {
+					19: 30,
+					26: 30,
+					38: 30
+				}
+			},
+			30: { length: 1477 }
 		},
 		5: { // Blessing of Shakan
-			0: { length: 1300 }
+			0: { length: 1294 }
 		},
 		6: { // Arise
-			0: { length: 830 }
+			0: { length: 839 }
 		},
 		8: { // Mana Infusion
 			0: {
-				length: 4600,
+				length: 4595,
 				glyphs: {
 					28044: { speed: 1.25 }
+				},
+				race: {
+					0: { length: 4625 }
 				}
 			}
 		},
 		10: { // Purifying Circle
-			0: { length: 1275 }
+			0: { length: 1294 }
 		},
 		11: { // Metamorphic Blast
-			0: { length: 830 }
+			'*': { length: 839 },
+			0: true,
+			1: {
+				abnormals: {
+					805800: { chain: 2 }
+				}
+			},
+			2: true
 		},
 		12: { // Resurrect
 			0: {
@@ -2041,10 +2062,39 @@ module.exports = {
 			}
 		},
 		14: { // Summon: Party
-			0: { length: 4500 }
+			0: {
+				length: 4505,
+				race: {
+					0: { length: 4535 }
+				}
+			}
 		},
 		16: { // Shocking Implosion
-			0: { length: 1700 }
+			'*': { length: 1718 },
+			0: {
+				chains: {
+					11: 30,
+					27: 30
+				}
+			},
+			10: {
+				chains: {
+					11: 11,
+					27: 11
+				},
+				abnormals: {
+					805800: { chain: 20 }
+				}
+			},
+			11: {
+				length: 1438,
+				abnormals: {
+					805800: { chain: 21 }
+				}
+			},
+			20: true,
+			21: { length: 1438 },
+			30: { length: 1438 }
 		},
 		17: { // Prayer of Peace
 			0: {
@@ -2055,7 +2105,7 @@ module.exports = {
 			}
 		},
 		18: { // Heal Thyself
-			0: { length: 1250 }
+			0: { length: 1266 }
 		},
 		19: { // Focus Heal
 			'*': { noRetry: true },
@@ -2066,11 +2116,11 @@ module.exports = {
 			},
 			10: {
 				type: 'lockonCast',
-				length: 1940
+				length: 1950
 			}
 		},
 		22: { // Kaia's Shield
-			0: { length: 650 }
+			0: { length: 667 }
 		},
 		23: { // Blessing of Balder
 			0: { length: 1300 }
@@ -2083,9 +2133,14 @@ module.exports = {
 			}
 		},
 		27: { // Final Reprisal
-			0: {
-				length: 2600,
+			'*': {
+				length: 2933,
 				noInterrupt: [27],
+				race: {
+					9: { length: 3333 }
+				}
+			},
+			0: {
 				chains: {
 					11: 30,
 					16: 30,
@@ -2093,12 +2148,47 @@ module.exports = {
 					40: 30
 				}
 			},
-			30: { length: 1040 }
+			10: {
+				chains: {
+					11: 11,
+					16: 11,
+					29: 11,
+					40: 11
+				},
+				abnormals: {
+					805800: { chain: 20 }
+				}
+			},
+			11: {
+				length: 1113,
+				abnormals: {
+					805800: { chain: 21 }
+				},
+				race: {
+					9: { length: 1273 }
+				}
+			},
+			20: true,
+			21: {
+				length: 1113,
+				race: {
+					9: { length: 1273 }
+				}
+			},
+			30: {
+				length: 1113,
+				race: {
+					9: { length: 1273 }
+				}
+			}
 		},
 		28: { // Mana Charge
 			'*': {
-				length: 825,
-				noRetry: true
+				length: 827,
+				noRetry: true,
+				level: {
+					1: { length: 700 }
+				}
 			},
 			0: {
 				type: 'charging',
@@ -2106,11 +2196,15 @@ module.exports = {
 				autoRelease: 0,
 				abnormals: {
 					28031: { chargeSpeed: 0.25 }
+				},
+				level: {
+					1: { length: [900, 900, 900] }
 				}
 			},
 			10: true,
 			11: true,
-			12: true
+			12: true,
+			13: true
 		},
 		29: { // Triple Nemesis
 			0: { length: 800 },
@@ -2156,7 +2250,7 @@ module.exports = {
 			}
 		},
 		34: { // Restorative Burst
-			0: { length: 1430 }
+			0: { length: 1433 }
 		},
 		35: { // Energy Stars
 			'*': { noRetry: true },
@@ -2195,10 +2289,17 @@ module.exports = {
 			}
 		},
 		39: { // Grace of Resurrection
-			0: { length: 5900 }
+			0: { length: 5904 }
 		},
 		40: { // Zenobia's Vortex
-			0: { length: 1050 }
+			'*': { length: 1071 },
+			0: true,
+			10: {
+				abnormals: {
+					805800: { chain: 20 }
+				}
+			},
+			20: true
 		},
 		41: { // Divine Intervention
 			'*': { noRetry: true },
