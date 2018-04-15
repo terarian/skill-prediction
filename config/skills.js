@@ -2313,6 +2313,15 @@ module.exports = {
 				type: 'lockonCast',
 				length: 925
 			}
+		},
+		42: { // Holy Burst
+			'*': { length: 800 },
+			20: {
+				abnormals: {
+					805800: { chain: 30 }
+				}
+			},
+			30: true
 		}
 	},
 	7: { // Mystic
