@@ -2182,7 +2182,7 @@ module.exports = {
 				}
 			}
 		},
-		28: { // Mana Charge
+		28: { // Mana Charge / Words of Vitality
 			'*': {
 				length: 827,
 				noRetry: true,
@@ -2198,7 +2198,10 @@ module.exports = {
 					28031: { chargeSpeed: 0.25 }
 				},
 				level: {
-					1: { length: [900, 900, 900] }
+					1: {
+						length: [900, 900, 900],
+						autoRelease: 3200
+					}
 				}
 			},
 			10: true,
