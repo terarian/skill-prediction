@@ -2464,14 +2464,14 @@ module.exports = {
 				type: 'charging',
 				length: 1240,
 				chargeLevels: [10, 10],
-				autoRelease: 10
+				autoRelease: 10,
+				abnormals: {
+					27070: { chargeSpeed: 0.25 },
+					27080: { chargeSpeed: 0.25 }
+				}
 			},
 			10: {
 				length: 800,
-				abnormals: {
-					27070: { speed: 1.25 },
-					27080: { speed: 1.25 }
-				},
 				race: {
 					9: { length: 833 }
 				}
@@ -2490,13 +2490,13 @@ module.exports = {
 				type: 'charging',
 				length: 1240,
 				chargeLevels: [10, 10],
-				autoRelease: 10
+				autoRelease: 10,
+				abnormals: {
+					27100: { chargeSpeed: 0.25 }
+				}
 			},
 			10: {
 				length: 800,
-				abnormals: {
-					27100: { speed: 1.25 }
-				},
 				race: {
 					9: { length: 833 }
 				}
