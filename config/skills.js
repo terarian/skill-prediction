@@ -2294,12 +2294,12 @@ module.exports = {
 			10: true,
 			20: true
 		},
-		41: { // Divine Intervention
+		41: { // Divine Intervention / Divine Vitality
 			'*': { noRetry: true },
 			0: {
 				type: 'lockon',
 				fixedSpeed: 1,
-				length: 54440,
+				length: 54445,
 				partyOnly: true
 			},
 			10: {
@@ -2311,6 +2311,10 @@ module.exports = {
 			'*': { length: 800 },
 			20: true,
 			30: true
+		},
+		43: { // Words of Judgement
+			0: { length: 1417 },
+			50: { length: 200 }
 		}
 	},
 	7: { // Mystic
