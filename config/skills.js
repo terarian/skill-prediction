@@ -2034,11 +2034,7 @@ module.exports = {
 		11: { // Metamorphic Blast
 			'*': { length: 839 },
 			0: true,
-			1: {
-				abnormals: {
-					805800: { chain: 2 }
-				}
-			},
+			1: true,
 			2: true
 		},
 		12: { // Resurrect
@@ -2081,18 +2077,15 @@ module.exports = {
 				chains: {
 					11: 11,
 					27: 11
-				},
-				abnormals: {
-					805800: { chain: 20 }
 				}
 			},
-			11: {
-				length: 1438,
-				abnormals: {
-					805800: { chain: 21 }
+			11: { length: 1438 },
+			20: {
+				chains: {
+					11: 21,
+					27: 21
 				}
 			},
-			20: true,
 			21: { length: 1438 },
 			30: { length: 1438 }
 		},
@@ -2154,21 +2147,22 @@ module.exports = {
 					16: 11,
 					29: 11,
 					40: 11
-				},
-				abnormals: {
-					805800: { chain: 20 }
 				}
 			},
 			11: {
 				length: 1113,
-				abnormals: {
-					805800: { chain: 21 }
-				},
 				race: {
 					9: { length: 1273 }
 				}
 			},
-			20: true,
+			20: {
+				chains: {
+					11: 21,
+					16: 21,
+					29: 21,
+					40: 21
+				}
+			},
 			21: {
 				length: 1113,
 				race: {
@@ -2297,11 +2291,7 @@ module.exports = {
 		40: { // Zenobia's Vortex
 			'*': { length: 1071 },
 			0: true,
-			10: {
-				abnormals: {
-					805800: { chain: 20 }
-				}
-			},
+			10: true,
 			20: true
 		},
 		41: { // Divine Intervention
@@ -2319,11 +2309,7 @@ module.exports = {
 		},
 		42: { // Holy Burst
 			'*': { length: 800 },
-			20: {
-				abnormals: {
-					805800: { chain: 30 }
-				}
-			},
+			20: true,
 			30: true
 		}
 	},
