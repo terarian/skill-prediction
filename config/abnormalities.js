@@ -1,6 +1,6 @@
 module.exports = {
 	/* Slayer */
-	23220: true, // Distant Blade (duration)
+	//23220: true, // Distant Blade (duration)
 
 	/* Gunner */
 	10152010: true, // Time Bomb (soft chain)
