@@ -2513,13 +2513,19 @@ module.exports = {
 			}
 		},
 		25: { // Thrall of Protection
-			'*': { length: [1000, 1700] },
+			'*': {
+				fixedSpeed: 1,
+				length: [1000, 1700]
+			},
 			0: true,
 			10: true,
 			30: { length: [500, 700] }
 		},
 		27: { // Thrall of Life
-			'*': { length: [229, 438] },
+			'*': {
+				fixedSpeed: 1,
+				length: [229, 438]
+			},
 			0: true,
 			10: true,
 			30: { length: [500, 700] }
@@ -2581,13 +2587,19 @@ module.exports = {
 			}
 		},
 		33: { // Thrall of Vengeance
-			'*': { length: [267, 511] },
+			'*': {
+				fixedSpeed: 1,
+				length: [267, 511]
+			},
 			0: true,
 			10: true,
 			30: { length: [500, 700] }
 		},
 		34: { // Thrall of Wrath
-			'*': { length: [1000, 1700] },
+			'*': {
+				fixedSpeed: 1,
+				length: [1000, 1700]
+			},
 			0: true,
 			10: true,
 			30: { length: [500, 1200] }
@@ -2647,7 +2659,10 @@ module.exports = {
 			0: { length: 1060 }
 		},
 		48: { // Thrall Lord
-			0: { length: 4050 }
+			0: {
+				fixedSpeed: 1,
+				length: 4050
+			}
 		}
 	},
 	8: { // Reaper
