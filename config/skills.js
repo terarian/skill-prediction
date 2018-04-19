@@ -2193,7 +2193,7 @@ module.exports = {
 				},
 				level: {
 					1: {
-						length: [900, 900, 900],
+						length: [833, 833, 833], // TODO: DC says 900, 900, 900
 						autoRelease: 3200
 					}
 				}
